@@ -26,7 +26,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/',[FrontendsController::class,'index'])->name('frontends.index');
 Route::get('detail',[FrontendsController::class,'show'])->name('frontends.detail');
 
-Auth::routes(['register'=>false]);
+Auth::routes();
 
 Route::get('cart/{id}',[CartController::class,'create'])->name('cart.create');
 Route::get('view/cart',[CartController::class,'index'])->name('cart.index');
